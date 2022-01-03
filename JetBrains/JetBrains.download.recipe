@@ -12,6 +12,8 @@
         <string>JetBrainsProductDownload</string>
         <key>PROD_CODE</key>
         <string>A valid product code can be obtained from https://data.services.jetbrains.com/products</string>
+        <key>ARCH</key>
+        <string>mac</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.0</string>
@@ -25,7 +27,7 @@
                 <key>url</key>
                 <string>https://data.services.jetbrains.com/products/releases?code=%PROD_CODE%&amp;latest=true&amp;type=release</string>
                 <key>re_pattern</key>
-                <string>"mac":{"link":"(https://download.jetbrains.com/.*?.dmg)"</string>
+                <string>"%ARCH%":{"link":"(https://download.jetbrains.com/.*?.dmg)"</string>
                 <key>request_headers</key>
                 <dict>
                     <key>user-agent</key>
